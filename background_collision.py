@@ -28,13 +28,13 @@ class App:
         self.player = Player()
         
         # 最背面
-        self.background = DrawMap(0, 0, 0, 0, 0, 256, 256, 0)
+        self.background = DrawMap(0, 0, 0, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0)
         # 背面だけどデザイン上、最背面の上に乗せるもの
-        self.overwrap = DrawMap(0, 0, 1, 0, 0, 256, 256, 0)
+        self.overwrap = DrawMap(0, 0, 1, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0)
         # キャラクターの上に被さるもの
-        self.foreground = DrawMap(0, 0, 2, 0, 0, 256, 256, 0)
+        self.foreground = DrawMap(0, 0, 2, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0)
         # 衝突判定用
-        self.collision = DrawMap(0, 0, 3, 0, 0, 256, 256, 0)
+        self.collision = DrawMap(0, 0, 3, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0)
         
         pyxel.run(self.update, self.draw)
     
