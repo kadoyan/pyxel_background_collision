@@ -18,18 +18,18 @@ SCALE = 1
 
 class Player:
     
-    def __init__(self):
-        self.x = 120
-        self.y = 100
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
         self.dx = 0
         self.dy = 0
         self.anime = 0
         self.frame = len(ANIME_FRAME)
         self.direction = 2
         self.moving = False
-        self.global_values = GlobalValues()
-        self.global_values.screen_position["x"] = self.x
-        self.global_values.screen_position["y"] = self.y
+        self.global_values = GlobalValues(self.x, self.y)
+        # self.global_values.screen_position["x"] = 
+        # self.global_values.screen_position["y"] = 
         self.global_x = 0
         self.global_y = 0
         self.collision = False

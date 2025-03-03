@@ -12,8 +12,8 @@ class GlobalValues:
             cls._instance.__initialized = False
         return cls._instance
     
-    def __init__(self):
-        self._screen_position = {'x': 0, 'y': 0}
+    def __init__(self, x=0, y=0):
+        self._screen_position = {'x': x, 'y': y}
         
     # Player position in Global
     @property
